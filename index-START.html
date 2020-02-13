@@ -35,6 +35,27 @@
   </style>
 
 <script>
+
+  const hero = document.querySelector('.hero');
+  // console.log(hero);
+  const text = hero.querySelector('h1');
+  // console.log(text);
+  const walk = 100; //100px
+
+  function shadow(e) {
+    const { offsetWidth: width, offsetHeight: height } = hero;
+    let { offsetX: x, offsetY: y } = e;
+
+    if (this !== e.target) {
+      x = x + e.target.offsetLeft;
+      y = y + e.target.offsetTop;
+    }
+
+    console.log(x, y);
+  }
+
+  hero.addEventListener('mousemove', shadow);
+
 </script>
 </body>
 </html>
