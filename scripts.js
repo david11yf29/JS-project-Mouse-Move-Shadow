@@ -1,7 +1,5 @@
-let a = 1 + '2';
-let b = '1' + '2';
+let a = Number(false);
 
 console.log(a);
-console.log(b);
 
 console.log(typeof(a));
