@@ -1,4 +1,4 @@
-let a = Number(false);
+let a = null == 0;
 
 console.log(a);
 
