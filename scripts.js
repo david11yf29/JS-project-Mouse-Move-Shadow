@@ -1,5 +1,7 @@
-var a = "Hello World!";
+let a = 1 + '2';
+let b = '1' + '2';
 
-function b() {
+console.log(a);
+console.log(b);
 
-};
+console.log(typeof(a));
