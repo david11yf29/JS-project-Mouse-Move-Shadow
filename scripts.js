@@ -1,5 +1,6 @@
-let a = null == 0;
+function Person() {
+    console.log(this);
+}
 
-console.log(a);
-
-console.log(typeof(a));
+let john = new Person;
+console.log(john);
