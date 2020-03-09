@@ -1,7 +1,10 @@
-function Person(name) {
-    console.log(this);
-    this.name = name;
+let person = {
+    firstname: 'Default',
+    lastname: 'Default',
+    greet: function() {
+        return `Hi + ${this.firstname}`;
+    }
 }
 
-let john = new Person('John');
+let john = Object.create(person);
 console.log(john);
