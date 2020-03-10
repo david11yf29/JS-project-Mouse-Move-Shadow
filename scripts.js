@@ -1,10 +1,7 @@
-function subtractTwo(num) {
-    return num - 2;
-};
+function marry(per1, per2)
+{
+    console.log(arguments);
+    return `${per1} is married to ${per2}`;
+}
 
-function calculate() {
-    const sumTotal = 4 + 5;
-    return subtractTwo(sumTotal)
-};
-
-calculate()
+console.log(marry('Grace', 'David'));
