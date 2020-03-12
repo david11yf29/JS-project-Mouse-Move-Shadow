@@ -1,9 +1,3 @@
-function sayMyName() {
-    return function findName() {
-        return function printName() {
-            return 'David';
-        }
-    }
-};
+const four = new Function(console.log('Hi'));
 
-console.log(sayMyName()()());
+four();
