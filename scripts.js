@@ -1,3 +1,17 @@
-const four = new Function(console.log('Hi'));
+let view;
+function initialize() {
+    let called = 0;
+    return function() {
+        if (called > 0) {
+            return;
+        } else {
+            view = ":v :v :v"
+            called++;
+            console.log(view);
+        }
+    }
+}
 
-four();
+const startonce = initialize();
+startonce();
+startonce();
