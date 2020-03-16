@@ -1,11 +1,4 @@
-let fn = function() {
-    console.log(this);
+const elf = {
+    name: 'Orwell',
+    weapon: 'bow'
 }
-
-fn();
-
-let fn2 = () => {
-    console.log(this);
-}
-
-fn2();
