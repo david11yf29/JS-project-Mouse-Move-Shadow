@@ -1,22 +1,23 @@
-// const elf = {
-//     name: 'Orwell',
-//     weapon: 'bow',
-//     attack() {
-//         return 'attach with ' + elf.weapon
-//     }
-// }
+class Charactor {
+    constructor(name, weapon) {
+        this.name = name;
+        this.weapon = weapon;
+    }
 
-// console.log(elf.attack());
-
-function createElf(name, weapon) {
-    return {
-        name: name,
-        weapon: weapon,
-        attack() {
-            return 'attack with ' + weapon
-        }
+    attack() {
+        return 'attack with ' + this.weapon;
     }
 }
 
-const peter = createElf('Peter', 'stones');
-console.log(peter.attack());
+class Elf extends Charactor {
+    constructor(name, weapon, type) {
+        super(name, weapon);
+        this.type = type;
+    }
+}
+
+const dolby = new Elf('Dolby', 'cloth', 'house');
+console.log(dolby.__proto__);
+console.log(dolby.__proto__.__proto__);
+console.log(dolby.__proto__.__proto__.__proto__);
+console.log(dolby.__proto__.__proto__.__proto__.__proto__);
