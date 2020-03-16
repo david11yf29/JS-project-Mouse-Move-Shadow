@@ -13,6 +13,7 @@ class Elf extends Charactor {
     constructor(name, weapon, type) {
         super(name, weapon);
         this.type = type;
+        console.log(this);
     }
 }
 
@@ -20,6 +21,7 @@ class Monster extends Elf {
     constructor(name, weapon, type, blood) {
         super(name, weapon, type);
         this.blood = blood;
+        console.log(this);
     }
 }
 
