@@ -16,8 +16,16 @@ class Elf extends Charactor {
     }
 }
 
-const dolby = new Elf('Dolby', 'cloth', 'house');
+class Monster extends Elf {
+    constructor(name, weapon, type, blood) {
+        super(name, weapon, type);
+        this.blood = blood;
+    }
+}
+
+const dolby = new Monster('Dolby', 'cloth', 'house', 'O');
 console.log(dolby.__proto__);
 console.log(dolby.__proto__.__proto__);
 console.log(dolby.__proto__.__proto__.__proto__);
 console.log(dolby.__proto__.__proto__.__proto__.__proto__);
+console.log(dolby.__proto__.__proto__.__proto__.__proto__.__proto__);
