@@ -1,3 +1,22 @@
-const multiply = (a, b) => a*b;
-const curriedMutiply = (a) => (b) => (c) => a*b*c;
-console.log(curriedMutiply(3)(4)(10));
+function momoizedAddTo80() {
+    let cache = {};
+    return function(n) {
+        if (n in cache) {
+            return cache[n];
+        } else {
+            console.log('long time');
+            cache[n] = n + 80;
+            return cache[n]
+        }
+    }
+}
+
+const memoized = momoizedAddTo80();
+
+console.log('1', memoized(5));
+console.log('2', memoized(6));
+console.log('1', memoized(5));
+console.log('2', memoized(6));
+
+// console.log('1', momoizedAddTo80(5));
+// console.log('2', momoizedAddTo80(5));
